@@ -1,9 +1,9 @@
-import NavigationBar from "./navigationBar";
+import Header from "./header";
 
 export default function Home() {
   return (
     <main>
-    <NavigationBar />
+      <Header />
     </main>
   )
 }
