@@ -24,12 +24,12 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Configure Firebase credentials
+      - name: Authenticate with Firebase
         env:
           FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
         run: |
-          echo "$FIREBASE_SERVICE_ACCOUNT_KEY" > serviceAccountKey.json
-          firebase functions:config:set project.service_account_key="$(cat serviceAccountKey.json)"
+          echo "$FIREBASE_SERVICE_ACCOUNT_KEY" | base64 --decode > serviceAccountKey.json
+          firebase use --token "$(cat serviceAccountKey.json)"
 
       - name: Install app dependencies
         run: npm ci
@@ -38,6 +38,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Firebase Hosting
-        run: |
-          firebase use --token "$FIREBASE_TOKEN"
-          firebase deploy --only hosting
+        run: firebase deploy --only hosting
