@@ -29,7 +29,6 @@ jobs:
           FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
         run: |
           echo "$FIREBASE_SERVICE_ACCOUNT_KEY" > serviceAccountKey.json
-          firebase use --add --token "$FIREBASE_SERVICE_ACCOUNT_KEY"
 
       - name: Install app dependencies
         run: npm ci
@@ -38,4 +37,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting
+        env:
+          FIREBASE_PROJECT_ID: your-project-id
+        run: firebase deploy --only hosting --project "$FIREBASE_PROJECT_ID"
