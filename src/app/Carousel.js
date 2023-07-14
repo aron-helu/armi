@@ -4,7 +4,6 @@ import items from "./items.js";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Bootstrap.module.css";
-import Link from "next/link";
 
 const Hero = () => {
     const { bootstrap } = items;
