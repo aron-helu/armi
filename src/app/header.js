@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NavBar from "./navigationBar";
 
 export default function Header() {
     return (
@@ -28,7 +29,7 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="w-full h-24" style={{ backgroundColor: '#0F172B' }}>
-                    <h1 className="text-white">Hello</h1>
+                        <NavBar />
                     </div>
                 </div>
             </div>
