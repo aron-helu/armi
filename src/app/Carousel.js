@@ -36,7 +36,7 @@ const Hero = () => {
                             <div className={`${styles.container} ${styles.responsiveContainer}`}>
                                 <div className="d-flex flex-column align-items-center justify-content-center h-100">
                                     <div className="p-3" style={{ maxWidth: '700px' }}>
-                                        <hr className="p-2 border-solid border-2 border-yellow-500 bg-yellow-700" />
+                                        <hr className="border-solid border-2 border-yellow-500 bg-yellow-700" />
                                         <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Vacation Getaway</h6>
                                         <hr className="p-2" />
                                         <h1 className="display-3 text-white mb-4 animated slideInDown">Discover Vacation Getaway Guest House</h1>
