@@ -28,7 +28,7 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="w-full h-24" style={{ backgroundColor: '#0F172B' }}>
-                        <h1>Hello</h1>
+                    <h1 className="text-white">Hello</h1>
                     </div>
                 </div>
             </div>
