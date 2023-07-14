@@ -19,7 +19,7 @@ export default function Header() {
                                 <p className="ml-2 text-sm text-gray-500">+2917193598</p>
                             </div>
                         </div>
-                        <div className="flex items-center justify-end border-solid w-3/4 gap-8 h-12 pl-2 pr-16">
+                        <div className="flex items-center justify-end border-solid w-3/4 gap-8 h-12 pl-2 pr-8">
                             <Image src="/icons8-whatsapp-50.png" alt="Whatsapp" width={30} height={20} />
                             <Image src="/icons8-facebook-50.png" alt="Facebook" width={30} height={20} />
                             <Image  src="/icons8-twitter-squared-50.png" alt="Twitter" width={30} height={20} />
