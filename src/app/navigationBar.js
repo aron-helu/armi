@@ -7,14 +7,14 @@ export const Navbar = () => {
   const router = useRouter();
   const currentRoute = router.pathname;  
   return (
-    <div className="p-4 mt-4 flex">
+    <div className="pt-2 mt-2 flex">
       {MenuItems.map((item, index) => {
         console.log(item.url);
         return (
           <>
-            <Link href={item.url} passHref>
+            <Link href={item.url} passHref className="text-decoration-none ">
               <div
-                className={`w-24 h-24 text-center mt-3 cursor-pointer ${
+                className={`w-24 h-24 text-center mt-4 cursor-pointer ${
                   currentRoute === item.url ? 'text-white' : 'text-yellow-300'
                 }`}
               >
@@ -29,3 +29,4 @@ export const Navbar = () => {
 };
 
 export default Navbar;
+
