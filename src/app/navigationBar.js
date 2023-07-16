@@ -15,10 +15,10 @@ export const Navbar = () => {
             <Link href={item.url} passHref className="text-decoration-none ">
               <div
                 className={`w-24 h-24 text-center mt-4 cursor-pointer ${
-                  currentRoute === item.url ? 'text-white' : 'text-yellow-300'
+                  currentRoute === item.url ? 'text-white' : 'text-[#FEA116]'
                 }`}
               >
-                <p className="hover:text-gray-300 text-yellow-300">{item.label}</p>
+                <p className="hover:text-gray-300 text-text-orange">{item.label}</p>
               </div>
             </Link>
           </>
