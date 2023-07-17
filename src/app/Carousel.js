@@ -29,7 +29,7 @@ const Hero = () => {
                                             Your Private Oasis
                                         </h6>
                                         <h1 className="display-3 text-white mb-4 animated slideInDown">Discover the Ultimate Getaway</h1>
-                                        <p className="lead text-white mb-4 animated slideInUp">
+                                        <p className=" hidden sm:flex lead text-white mb-4 animated slideInUp">
                                             Uncover a little piece of paradise at our guest house in Asmara, Eritrea. Our cozy rooms offer comfortable beds, invigorating showers, and all the amenities you need for a memorable stay. Experience pure relaxation and create lasting memories on your next vacation. Reserve your retreat now!
                                         </p>
                                         <a href="" className="btn btn-primary py-md-3 px-md-5 me-3" style={{ backgroundColor: "#FEA116", color: "black" }}>
