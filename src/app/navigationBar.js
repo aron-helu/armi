@@ -15,9 +15,9 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="pt-4 mt-2 pr-4 flex justify-end items-center">
+    <div className="flex justify-end items-center">
       {/* Mobile Menu Toggle */}
-      <div className="sm:hidden">
+      <div className="sm:hidden mt-4 p-2">
         <button
           className="text-[#FEA116] text-2xl border-solid w-full"
           onClick={handleMenuToggle}
@@ -45,7 +45,7 @@ export const Navbar = () => {
           !menuOpen ? "justify-start" : ""
         }`}
       >
-        <div className="flex">
+        <div className="flex pt-4">
           {MenuItems.map((item, index) => {
             console.log(item.url);
             return (
@@ -69,7 +69,7 @@ export const Navbar = () => {
           })}
         </div>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end bg-white left-0 right-0 bottom-0 h-full p-4">
           <Image
             src="/icons8-male-user-50.png"
             alt="user"
@@ -79,11 +79,11 @@ export const Navbar = () => {
             unoptimized
           />
           <Link href="/login" className="text-decoration-none">
-            <p className="hover:text-gray-300 m-4 text-[#FEA116]">Login</p>
+            <p className="hover:text-gray-300 m-4 text-gray-500">Login</p>
           </Link>
-          <span className="text-[#FEA116]"> / </span>
+          <span className="text-gray-500"> / </span>
           <Link href="/register" className="text-decoration-none">
-            <p className="hover:text-gray-300 m-4 text-[#FEA116]">Register</p>
+            <p className="hover:text-gray-300 m-4 text-gray-500">Register</p>
           </Link>
         </div>
       </div>
@@ -112,7 +112,7 @@ export const Navbar = () => {
               </Link>
             ))}
 
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end pl-0">
               <Image
                 src="/icons8-male-user-50.png"
                 alt="user"
