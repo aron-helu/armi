@@ -1,8 +1,9 @@
-'use client';
+"use client";
 import { useState } from "react";
 import MenuItems from "./menuItems";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -39,21 +40,52 @@ export const Navbar = () => {
       </div>
 
       {/* Menu Items */}
-      <div className={`hidden sm:flex w-full ${!menuOpen ? "justify-start" : ""}`}>
-        {MenuItems.map((item, index) => {
-          console.log(item.url);
-          return (
-            <Link key={index} href={item.url} passHref className="text-decoration-none">
-              <div
-                className={`w-24 h-14 text-center mt-4 cursor-pointer ${
-                  currentRoute === item.url ? "text-white" : "text-[#FEA116]"
-                }`}
+      <div
+        className={`hidden sm:flex w-full justify-between ${
+          !menuOpen ? "justify-start" : ""
+        }`}
+      >
+        <div className="flex">
+          {MenuItems.map((item, index) => {
+            console.log(item.url);
+            return (
+              <Link
+                key={index}
+                href={item.url}
+                passHref
+                className="text-decoration-none"
               >
-                <p className="hover:text-gray-300 text-text-orange">{item.label}</p>
-              </div>
-            </Link>
-          );
-        })}
+                <div
+                  className={`w-24 h-14 text-center mt-4 cursor-pointer ${
+                    currentRoute === item.url ? "text-white" : "text-[#FEA116]"
+                  }`}
+                >
+                  <p className="hover:text-gray-300 text-orange">
+                    {item.label}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="flex items-center justify-end">
+          <Image
+            src="/icons8-male-user-50.png"
+            alt="user"
+            width={50}
+            height={100}
+            className="h-auto w-4/3"
+            unoptimized
+          />
+          <Link href="/login" className="text-decoration-none">
+            <p className="hover:text-gray-300 m-4 text-[#FEA116]">Login</p>
+          </Link>
+          <span className="text-[#FEA116]"> / </span>
+          <Link href="/register" className="text-decoration-none">
+            <p className="hover:text-gray-300 m-4 text-[#FEA116]">Register</p>
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Menu Popup */}
@@ -61,14 +93,21 @@ export const Navbar = () => {
         <div className="sm:hidden absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-[#0F172B] bg-opacity-50 z-50">
           <div className="bg-[#0F172B] w-full p-4">
             {MenuItems.map((item, index) => (
-              <Link key={index} href={item.url} passHref className="text-decoration-none">
+              <Link
+                key={index}
+                href={item.url}
+                passHref
+                className="text-decoration-none"
+              >
                 <div
                   className={`w-24 h-14 text-center mt-4 cursor-pointer ${
                     currentRoute === item.url ? "text-white" : "text-[#FEA116]"
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  <p className="hover:text-gray-300 text-text-orange">{item.label}</p>
+                  <p className="hover:text-gray-300 text-text-orange">
+                    {item.label}
+                  </p>
                 </div>
               </Link>
             ))}
