@@ -111,6 +111,26 @@ export const Navbar = () => {
                 </div>
               </Link>
             ))}
+
+            <div className="flex items-center justify-end">
+              <Image
+                src="/icons8-male-user-50.png"
+                alt="user"
+                width={50}
+                height={100}
+                className="h-auto w-4/3"
+                unoptimized
+              />
+              <Link href="/login" className="text-decoration-none">
+                <p className="hover:text-gray-300 m-4 text-[#FEA116]">Login</p>
+              </Link>
+              <span className="text-[#FEA116]"> / </span>
+              <Link href="/register" className="text-decoration-none">
+                <p className="hover:text-gray-300 m-4 text-[#FEA116]">
+                  Register
+                </p>
+              </Link>
+            </div>
             <button
               className="text-[#FEA116] text-2xl mt-4"
               onClick={handleMenuToggle}
