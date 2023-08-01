@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'ARMI-Booking',
+  title: 'YOMI-Booking',
   description: 'Escape to our guest house in Asmara, Eritrea. Relax and recharge with modern amenities, including a kitchen and TV. Book your stay now!',
 };
 

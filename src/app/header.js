@@ -6,7 +6,7 @@ export default function Header() {
     <main className="px-0 w-full md:w-auto">
       <div className="flex mx-auto w-full">
         <div
-          className="m-0 p-2 flex-grow"
+          className="m-0 p-0 flex-grow"
           style={{
             backgroundColor: "#0F172B",
             height: "auto",
